@@ -1,0 +1,9 @@
+{% extends 'index/_index_layout.html' %}
+
+{% block content %}
+<div class="container">
+    {% with wordgroup_stat = wordgroup_stat, enumerate = enumerate %}
+        {% include "index/_all_wordgroups.html" %}
+    {% endwith %}
+</div>
+{% endblock %}

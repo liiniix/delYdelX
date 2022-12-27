@@ -1,21 +1,12 @@
-$(document).ready(function() {
+$( document ).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip();
 
-    $('body').on('click', '#btnLong', function(){
-        $('#short-div').slideUp('slow',function(){
-            $('#long-div').slideDown();
-        });
-        
-    })
+    $('.bi-lightning-charge-fill').click(function(){
+        $('#word-of-week-1-serial-1-accordion-header button').addClass('text-danger')
+    });
 
-    $('body').on('click', '#btnShort', function(){
-        $('#long-div').slideUp('slow',function(){
-            $('#short-div').slideDown();
-        });
-    })
-
-    $('.collapsible').click(function(e){
-        $(e.target).next('.content').slideToggle('slow', function(){
-            $(e.target).toggleClass('active');
-        });
-    })
+    $('.card').click(function(){
+        const url = $(this).data('redirect-url');
+        location.href = url;
+    });
 });

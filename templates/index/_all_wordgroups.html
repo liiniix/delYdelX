@@ -1,0 +1,11 @@
+{% for i, row in enumerate(range(wordgroup_stat.wordlistCount)) %}
+{% set group_no = i + 1 %}
+    <div class="card text-dark mb-3"
+    data-redirect-url="{{url_for('get_wordlist_landingpage', group_no = group_no)}}" style="background-color: #e3f2fd;">
+        <div class="card-header">Group 1</div>
+        <div class="card-body">
+            <h5 class="card-title">Group 1</h5>
+            <p class="card-text">Word Count: {{wordgroup_stat.wordCountInWordlist[i]}}</p>
+        </div>
+    </div>
+{% endfor %}

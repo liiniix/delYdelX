@@ -1,7 +1,16 @@
+body {
+    height: 100%;
+}
+
+.card {
+    cursor: pointer !important;
+}
+
 .container {
     margin: auto;
     max-width: 650px;
 }
+
 .flex-container {
     display: flex;
     justify-content: space-evenly;
@@ -154,3 +163,180 @@ strong{
     display: flex;
     justify-content: space-between;
 }
+
+.container {
+    margin: auto;
+    max-width: 650px;
+}
+.flex-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-self: center;
+}
+h2 {
+    color: #96979c;
+}
+@media (max-width: 600px) {
+    .container {
+      padding: 20px;
+    }
+    .flex-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        align-self: center;
+        flex-direction: column;
+    }
+
+}
+
+a:hover {
+    background-color: cornflowerblue;
+    transition: 2s ease;
+}
+body {
+    background: #fff;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa:hover {
+        opacity: 0.7;
+    }
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-google {
+    background: #dd4b39;
+    color: white;
+}
+
+.fa-github {
+    background: #96979c;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+button{
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 15px;
+}
+#btnLong{
+    background-color: #008CBA;
+    color: white;
+    border: 2px solid #008CBA;
+}
+#btnLong:hover {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+}
+#btnShort{
+    background-color: #f44336;
+    color: white;
+    border: 2px solid #f44336;
+}
+#btnShort:hover {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #f44336;
+}
+
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    margin:auto;
+    width: 95%;
+    align-self:left;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #555;
+  }
+  
+  .collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
+  
+  .content {
+    display: none;
+  }
+strong{
+    color: #5cb85c;
+}
+.content > div > .collapsible{
+    padding: 9px;
+    padding-left: 18px;
+}
+
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }

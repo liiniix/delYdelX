@@ -1,0 +1,42 @@
+{% for i, row in enumerate(wordlist) %}
+{% set serial = i + 1 %}
+<div class="accordion accordion-flush" id="wordlistAccordion">
+    <div class="accordion-item">
+
+        <h2 class="accordion-header" id="word-of-week-1-serial-{{serial}}-accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#word-of-week-1-serial-{{serial}}-accordion-collapse" aria-expanded="false"
+                aria-controls="word-of-week-1-serial-{{serial}}-accordion-collapse">
+                <div class="word-and-buttons" style="display: flex;">
+                    <div class="word" style="width: 473px;">{{serial}}. {{row[0]}}</div>
+                    <div class="buttons">
+                        <i class="bi bi-type-strikethrough" title="Click to strike through the work" data-toggle="tooltip" data-placement="top"></i>
+                        <i class="bi bi-lightning-charge-fill" title="Click to mark this for later" data-toggle="tooltip" data-placement="top"></i>
+                        <a href="https://dictionary.cambridge.org/dictionary/english/{{row[0]}}"  target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-forward" title="Click to redirect to dictionary website." data-toggle="tooltip" data-placement="top"></i>
+                        </a>
+                    </div>
+                </div>
+            </button>
+        </h2>
+
+        <div id="word-of-week-1-serial-{{serial}}-accordion-collapse" class="accordion-collapse collapse"
+            aria-labelledby=word-of-week-1-serial-{{serial}}-accordion-header" data-bs-parent="#wordlistAccordion">
+            <div class="accordion-body">
+                <p>
+                    {{row[1]}}
+                </p>
+                <p>
+                    {{row[2]}}
+                </p>
+                <ul>
+                    {% for example in row[3].split(',') %}
+                    <li>{{example}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endfor %}
