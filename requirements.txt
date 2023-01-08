@@ -1,4 +1,4 @@
-python=3.10.4
+python==3.10.4
 beautifulsoup4 @ file:///C:/ci/beautifulsoup4_1650293028159/work
 Bottleneck @ file:///C:/ci/bottleneck_1648029530934/work
 brotlipy==0.7.0
