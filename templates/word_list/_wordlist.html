@@ -10,7 +10,7 @@
                 <div class="word-and-buttons" style="display: flex;">
                     <div class="word" style="width: 473px;">{{serial}}. {{row[0]}}</div>
                     <div class="buttons">
-                        <i class="bi bi-type-strikethrough" title="Click to strike through the work" data-toggle="tooltip" data-placement="top"></i>
+                        <i class="bi bi-type-strikethrough  mark-icon" title="Click to strike through the work" data-toggle="tooltip" data-placement="top"></i>
                         <i class="bi bi-lightning-charge-fill" title="Click to mark this for later" data-toggle="tooltip" data-placement="top"></i>
                         <a href="https://dictionary.cambridge.org/dictionary/english/{{row[0]}}"  target="_blank" rel="noopener noreferrer">
                             <i class="bi bi-forward" title="Click to redirect to dictionary website." data-toggle="tooltip" data-placement="top"></i>
@@ -21,7 +21,7 @@
         </h2>
 
         <div id="word-of-week-1-serial-{{serial}}-accordion-collapse" class="accordion-collapse collapse"
-            aria-labelledby=word-of-week-1-serial-{{serial}}-accordion-header" data-bs-parent="#wordlistAccordion">
+            aria-labelledby="word-of-week-1-serial-{{serial}}-accordion-header" data-bs-parent="#wordlistAccordion">
             <div class="accordion-body">
                 <p>
                     {{row[1]}}
@@ -40,3 +40,5 @@
     </div>
 </div>
 {% endfor %}
+
+<input type="hidden" id="groupNo" value="{{group_no}}">

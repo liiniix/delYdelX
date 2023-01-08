@@ -54,6 +54,7 @@ def get_wordlist_landingpage(group_no):
     return render_template('word_list/wordlist_landingpage.html',
                             wordlist = wordlist,
                             enumerate = enumerate,
+                            group_no = group_no,
                             rand = time.time()
     )
 

@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="container">
-    {% with wordlist = wordlist, enumerate = enumerate %}
+    {% with wordlist = wordlist, enumerate = enumerate, group_no = group_no %}
         {% include 'word_list/_wordlist.html' %}
     {% endwith %}
 </div>

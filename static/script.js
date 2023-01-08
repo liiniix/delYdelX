@@ -9,4 +9,19 @@ $( document ).ready(function() {
         const url = $(this).data('redirect-url');
         location.href = url;
     });
+
+    $(document).on('click', '.mark-icon', function(){
+        markWord(this);
+    });
 });
+
+function markWord(element) {
+    const alreadyMarked = $(element).closest('.word-and-buttons').hasClass('red')
+    
+    if(alreadyMarked){
+        $(element).closest('.word-and-buttons').removeClass("red");
+        return;
+    }
+
+    $(element).closest('.word-and-buttons').addClass("red");
+}
